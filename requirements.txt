@@ -1,0 +1,39 @@
+	/*plan:
+	  architecture Db
+	  crud each table
+	  gin/postgres
+	tables: users, homes, devices, roles, configuration, type_devices, etc
+
+
+	  client side -> js/html/css
+	  table 2D array; 20x20;
+	  event/time/weather - handler -> change text, param value, bg, picture
+
+	  Separate zones : perimter - A[0...]; Gate - B[]; yard C[]; Office D[]; Kitchen D:1[], Guest D:2, WorkinRooms D:3,
+	  ChillRoom D:4[]
+
+	  2 roles - worker/ alien
+	  alien move -> handler - signalization - bg - red/blue
+
+
+Общая тематика
+
+Хакатон посвящен концепции SMART OFFICE - экосистемы,
+состоящей из коммуникационных устройств и
+интегрированных сервисов, которые объединяют в себе
+системы управления безопасностью, освещением,
+комфортом, бытовой техникой, энергией в новые и
+эффективные способы развлечения сотрудников компании.
+
+Попробуйте представить себе свой идеальный умный офис...
+Что он должен делать, и какие устройства вы хотели бы в нём
+видеть? Ваша задача реализовать прототип системы, которая
+получала бы данные от одного из устройств экосистемы умного
+дома и позволяла бы представить их в графическом виде.
+На данном этапе, устройство, отправляющее данные может быть
+эмулировано любым способом.
+
+Технологический стек, используемый при имплементации прототипа, должен позволять
+работать как на стороне клиента ("front end") так и стороне сервера ("back end"). К примеру, это могут быть:
+Front end: CSS, HTML, and Javascript, Angular, React, Vue или любые другие популярные фрейворки.
+Back end: Java, Python, JavaScript, Django, Flask, Objective-C, Ruby on Rails, Swift, Nginx, Apache и пр.
