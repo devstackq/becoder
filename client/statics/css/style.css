@@ -1,0 +1,51 @@
+body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background:cornsilk;
+    box-sizing: border-box;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.grid {
+    justify-content: center;
+    display: grid;
+    overflow: hidden;
+    position: relative;
+}
+.wall {
+    background-color: red;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: 80%;
+    
+}
+
+.box {
+    text-align: center;
+    position: relative;
+}
+.coin {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: 80%;
+    /* background-image: url("./assets/corona.png"); */
+    border-radius: 50%;
+    background-color: blueviolet;
+    background-repeat: no-repeat;
+    will-change: opacity;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
