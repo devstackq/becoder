@@ -2,8 +2,10 @@ package main
 
 import (
 	"html/template"
-	"log"
 	"net/http"
+
+	"github.com/devstackq/becoder/server/server"
+	"github.com/devstackq/becoder/server/sql"
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
@@ -14,10 +16,14 @@ func Index(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	mux := http.NewServeMux()
-	// file server
-	mux.Handle("/statics/", http.StripPrefix("/statics/", http.FileServer(http.Dir("../client/statics/"))))
-	log.Println("Run server..")
-	mux.HandleFunc("/", Index)
-	log.Println(http.ListenAndServe(":8888", mux))
+	store := sql.Store{}
+
+	server := server.NewServer(store)
+	server.Routes()
+	// mux := http.NewServeMux()
+	// // file server
+	// mux.Handle("/statics/", http.StripPrefix("/statics/", http.FileServer(http.Dir("../client/statics/"))))
+	// log.Println("Run server..")
+	// mux.HandleFunc("/", Index)
+	// log.Println(http.ListenAndServe(":8888", mux))
 }
