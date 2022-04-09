@@ -14,7 +14,8 @@ CREATE TABLE smart_home_user
     email varchar(255) NOT NULL UNIQUE,
     username VARCHAR(150) NOT NULL UNIQUE,
     password VARCHAR(128) NOT NULL,
-    phone DECIMAL NOT NULL,
+    --phone DECIMAL NOT NULL, 
+    phone VARCHAR(50) NOT NULL --Madi fix
     first_name VARCHAR(150) NOT NULL,
     last_name VARCHAR(150) NOT NULL,
     created_at TIMESTAMP NOT NULL,
